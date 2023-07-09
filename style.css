@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@700&family=Indie+Flower&family=Pacifico&family=Shadows+Into+Light&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    overflow-x: hidden;
+  }
+p{
+    color: white;
+    font-size: 25px;
+    justify-content: center;
+    text-align:center;
+    font-family:"Indie Flower", sans-serif;
+}
+h1{
+    color: white;
+    font-family: 'Pacifico', sans-serif;
+    text-align: center;
+}
+.marco-calculadora{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+.salida{
+    grid-column: 1/-1;
+    background-color: #1923574b;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border: 5px solid #fff;
+    
+}
+.marco-calculadora > button{
+    margin-top: 20px;
+    border-radius: 10px;
+    grid-column: 1/-1;
+    height: 45px;
+    font-size: 1.80rem;
+    cursor: pointer;
+    outline: none;
+    border: 2px solid black;
+    background-color: rgba(252,70,107,1);
+    font-family: "Indie Flower", sans-serif;
+}
+.marco-calculadora > button:hover{
+    background-color: rgb(218, 8, 124);
+}
+.Pantalla{
+    text-align: right;  
+    font-size: 1.65rem;
+    border-radius: 20px;
+    border-color: black;
+    border: 2px solid black;
+    padding: 2px;
+}
+#img1, #img2{
+    border-radius: 5%;
+    width: 350px;
+    height: 250px;
+    border: 3px solid black;
+}
+#img1{
+    float: left;
+    margin-left: 10px;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: transLateX(-30px)
+    }
+
+    50% {
+        transform: transLateX(30px);
+    }
+}
+
+#img2{
+    float: right;
+    margin-right: 20px;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate {
+
+    0%,
+    100% {
+        transform: transLateY(-30px)
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+}
+#texto1{
+    white-space: nowrap;
+    text-overflow:auto;
+    font-family: 'Shadows Into Light', sans-serif;
+}
+#texto2{
+    font-family: 'Shadows Into Light', sans-serif;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+  
